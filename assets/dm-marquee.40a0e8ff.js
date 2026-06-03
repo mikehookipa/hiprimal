@@ -1,0 +1,2 @@
+customElements.get("dm-marquee")||customElements.define("dm-marquee",class extends HTMLElement{constructor(){super();try{const speed=this.dataset.speed??100,animationSpeed=Math.max(9e4-speed*150,0);console.log("animationSpeed",animationSpeed,"Speed",speed),new InfiniteMarquee({element:this,speed:animationSpeed,pauseOnHover:!0,direction:"left",duplicateCount:5,mobileSettings:{speed:animationSpeed}})}catch(error){console.error("Error initializing vanilla-marquee:",error)}}});
+//# sourceMappingURL=/cdn/shop/t/6/assets/dm-marquee.js.map?v=24165459069512424261776801634
