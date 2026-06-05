@@ -2515,21 +2515,31 @@ html {
 </style>
 
 
+<style>
+  /* Announcement bar — richer gradient + refined brand type */
+  .hp-anno{background:linear-gradient(90deg,#FF1A94 0%,#E2037A 52%,#AD055F 100%) !important;padding-top:10px !important;padding-bottom:10px !important}
+  .hp-anno p{font-family:'Barlow Condensed',sans-serif !important;text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:13.5px !important;color:#fff !important;line-height:1.3 !important}
+  @media(max-width:640px){.hp-anno p{font-size:11px !important;letter-spacing:.05em}}
+  /* Header menu — brand condensed type, pink hover */
+  .hp-headernav p.content-md-regular{font-family:'Barlow Condensed',sans-serif !important;text-transform:uppercase;letter-spacing:.05em;font-weight:700;font-size:16px;color:#2A0A12 !important;transition:color .15s ease}
+  .hp-headernav a:hover p.content-md-regular,
+  .hp-headernav p.content-md-regular:hover{color:#FF1A94 !important}
+</style>
 <div class="sticky -top-[1px] group hover:top-0 transition-all duration-200 z-50" style="position: relative;">
   
-    <div class="py-2 " style="background-color: #E2037A;">
-      
-      
+    <div class="py-2 hp-anno" style="background-color: #E2037A;">
 
-      
-        <p class="mx-auto w-fit content-sm-semibold sm:content-sm-semibold dropmagic-text" style="text-align: var(--sections--27462888849778__dmeluwRyb48F--announcementTextTextAlign_text_alignment); color: #FFFFFF;">100% MONEY BACK GUARANTEE + FREE SHIPPING</p>
+
+
+
+        <p class="mx-auto w-fit content-sm-semibold sm:content-sm-semibold dropmagic-text" style="text-align: var(--sections--27462888849778__dmeluwRyb48F--announcementTextTextAlign_text_alignment); color: #FFFFFF;">100% Money-Back Guarantee &nbsp;·&nbsp; Free Shipping &amp; Returns</p>
     
 
       
       
     </div>
 
-  <header class="border-b shadow-sm" style="border-color: #F0C1CD;">
+  <header class="border-b shadow-sm hp-headernav" style="border-color: #F3CCD8;">
     <div class="block relative w-full transition-colors " style="background: #FFFFFF; padding-top: var(--sections--27462888849778__dmeluwRyb48F--sectionPaddingTop_responsive_range); padding-bottom: var(--sections--27462888849778__dmeluwRyb48F--sectionPaddingBottom_responsive_range); padding-left: var(--sections--27462888849778__dmeluwRyb48F--sectionPaddingLeft_responsive_range); padding-right: var(--sections--27462888849778__dmeluwRyb48F--sectionPaddingRight_responsive_range);">
       <div class="mx-auto flex justify-between items-center min-h-12 " style="max-width: 1400px;">
         <div class="flex items-center gap-x-8">
@@ -2823,6 +2833,48 @@ html {
   .hph-stars-svg{display:inline-flex;color:#FFC107}
   .hph-stars-svg svg{width:15px;height:15px}
 
+  /* CRO additions: CTA risk-reversal subtext, trust badges, compliance disclaimer */
+  .hph-cta-sub{font-size:13px;color:var(--text-muted);margin:12px 0 0;font-weight:600}
+  .hph-cta-sub .sep{opacity:.45;margin:0 4px}
+  .hph-badges{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px}
+  .hph-badges span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text);font-weight:600}
+  .hph-badges .bok{color:var(--green);font-weight:800}
+  .hph-disclaimer{font-size:11px;color:var(--text-light);margin-top:16px;max-width:540px;line-height:1.5}
+
+  /* Pain-aware hook */
+  .hph-painhook{font-size:19px;font-weight:600;color:var(--text);margin:0 0 16px;max-width:560px;line-height:1.45}
+  /* Offer chip near CTA (PLACEHOLDER PRICING) */
+  .hph-offer{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--pink-light);border:1px dashed var(--pink);border-radius:12px;padding:9px 14px;margin-bottom:18px;font-size:14px;color:var(--text)}
+  .hph-offer .tag{background:var(--pink);color:#fff;font-weight:700;font-size:11px;text-transform:uppercase;padding:3px 9px;border-radius:999px;letter-spacing:.04em}
+  .hph-offer .price{font-family:var(--f-title);font-weight:800;color:var(--pink-dark);font-size:19px}
+  .hph-offer .was{text-decoration:line-through;color:var(--text-light);font-weight:600;margin-left:2px}
+  /* Avatar social-proof stack */
+  .hph-avatars{display:flex;align-items:center;gap:12px;margin-top:24px}
+  .hph-avatars .stack{display:flex}
+  .hph-avatars .stack span{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-10px;display:flex;align-items:center;justify-content:center;font-family:var(--f-title);font-weight:800;font-size:11px;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.14)}
+  .hph-avatars .stack span:first-child{margin-left:0}
+  .hph-avatars .cap{font-size:13px;color:var(--text);line-height:1.3}
+  .hph-avatars .cap strong{font-weight:800}
+
+  /* Buy box — subscribe/one-time toggle + pack selector */
+  .hph-buybox{max-width:560px;margin:4px 0 0}
+  .hph-toggle{display:inline-flex;background:#fff;border:1px solid var(--border);border-radius:999px;padding:4px;margin-bottom:14px;gap:4px}
+  .hph-toggle button{border:0;background:transparent;font-family:var(--f-body);font-weight:700;font-size:13px;color:var(--text-muted);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .15s}
+  .hph-toggle button.active{background:var(--pink);color:#fff;box-shadow:0 4px 12px rgba(255,26,148,.28)}
+  .hph-packs{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+  .pack{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:15px 16px;background:#fff;border:2px solid var(--border);border-radius:14px;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+  .pack:hover{border-color:var(--pink-soft)}
+  .pack.sel{border-color:var(--pink);box-shadow:0 6px 18px rgba(255,26,148,.12)}
+  .pack input{accent-color:var(--pink);width:18px;height:18px;margin:0}
+  .pack .pname{font-family:var(--f-title);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.02em;display:block}
+  .pack .psub{font-family:var(--f-body);font-size:12.5px;font-weight:600;color:var(--text-muted);display:block;margin-top:2px}
+  .pprice-wrap{text-align:right;display:flex;flex-direction:column;line-height:1.12}
+  .pack .pold{font-size:12px;color:var(--text-light);text-decoration:line-through;font-weight:600}
+  .pack .pprice{font-family:var(--f-title);font-weight:800;font-size:20px;color:var(--text)}
+  .pack .punit{font-size:11.5px;color:var(--text-muted);font-weight:600}
+  .pack .badge{position:absolute;top:-9px;left:48px;background:var(--pink);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:999px}
+  .pack .badge.alt{background:var(--pink-deep)}
+
   /* Mini testimonial — inside left column, below trust */
   .hph-testimonial{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:14px;margin-top:24px;max-width:520px;box-shadow:0 4px 16px rgba(0,0,0,0.04)}
   .hph-test-avatar{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--pink-light) center/cover no-repeat;color:transparent;display:flex;align-items:center;justify-content:center;font-family:var(--f-title);font-size:14px;font-weight:800;letter-spacing:0.02em;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
@@ -2867,16 +2919,55 @@ html {
     <div class="hph-grid">
 
       <div class="hph-content">
-        <span class="hph-eyebrow">Beef Organ Supplement</span>
+        <span class="hph-eyebrow">For Everyday Energy, Skin &amp; Hair</span>
 
-        <h1>100% Natural Super Supplement For <span class='hl-grad'>High Performance Women</span></h1>
+        <h1>Nature's Multivitamin, Built for <span class='hl-grad'>High-Performance Women</span></h1>
 
-        <p class="hph-sub">Reduces hormonal imbalance, lifts energy, supports menstrual health, and helps with natural weight management — all in 2 capsules with your morning coffee. No mixing. No drinking. No chore.</p>
+        <p class="hph-painhook">Tired of 3&nbsp;p.m. crashes and a multivitamin you can't even feel?</p>
 
-        <a href="/products/beef-organ-superfoods" class="hph-cta">
-          Try HiPrimal — 100% Money-Back Guarantee
-          <span class="arr">→</span>
-        </a>
+        <p class="hph-sub">Six grass-fed beef organs — liver, heart, kidney, spleen, pancreas &amp; thymus — cold freeze-dried into 2 small capsules a day. A whole-food source of highly absorbable iron, B12, folate &amp; vitamin A to support everyday energy, healthy skin &amp; hair, and overall vitality.<sup>†</sup> No fishy taste. No beefy burps.</p>
+
+        <div class="hph-buybox" id="buy">
+          <div class="hph-toggle" role="group" aria-label="Purchase type">
+            <button type="button" data-mode="sub" class="active">🔁 Subscribe &amp; Save 15%</button>
+            <button type="button" data-mode="once">One-time</button>
+          </div>
+          <div class="hph-packs">
+            <label class="pack" data-base="45" data-units="1">
+              <input type="radio" name="pack" value="1">
+              <span class="pinfo"><span class="pname">1 Month</span><span class="psub">60 capsules · 30-day supply</span></span>
+              <span class="pprice-wrap"><span class="pold"></span><span class="pprice"></span><span class="punit"></span></span>
+            </label>
+            <label class="pack sel" data-base="108" data-units="3">
+              <span class="badge">Most Popular</span>
+              <input type="radio" name="pack" value="3" checked>
+              <span class="pinfo"><span class="pname">3 Months</span><span class="psub">Save 20% · the routine that works</span></span>
+              <span class="pprice-wrap"><span class="pold"></span><span class="pprice"></span><span class="punit"></span></span>
+            </label>
+            <label class="pack" data-base="189" data-units="6">
+              <span class="badge alt">Best Value</span>
+              <input type="radio" name="pack" value="6">
+              <span class="pinfo"><span class="pname">6 Months</span><span class="psub">Save 30% · lowest price per month</span></span>
+              <span class="pprice-wrap"><span class="pold"></span><span class="pprice"></span><span class="punit"></span></span>
+            </label>
+          </div>
+          <a href="/products/beef-organ-superfoods" class="hph-cta" id="hphCta">
+            <span class="ctatext">Add to Cart</span>
+            <span class="arr">→</span>
+          </a>
+          <p class="hph-cta-sub">100% money-back guarantee<span class="sep">·</span>Free shipping &amp; returns<span class="sep">·</span>Cancel or pause anytime</p>
+        </div>
+
+        <div class="hph-avatars">
+          <div class="stack">
+            <span style="background:linear-gradient(135deg,#FF1A94,#AD055F)">SK</span>
+            <span style="background:linear-gradient(135deg,#7c3aed,#4f46e5)">JL</span>
+            <span style="background:linear-gradient(135deg,#0ea5e9,#2563eb)">MR</span>
+            <span style="background:linear-gradient(135deg,#10B981,#059669)">AD</span>
+            <span style="background:linear-gradient(135deg,#f59e0b,#ea580c)">TC</span>
+          </div>
+          <span class="cap"><strong>Joined by 15,000+ women</strong> taking HiPrimal daily</span>
+        </div>
 
         <div class="hph-trust">
           <div class="hph-trust-item">
@@ -2892,7 +2983,59 @@ html {
           <div class="hph-trust-item"><span class="ok">✓</span>&nbsp;Free Refunds</div>
           <div class="hph-trust-item"><span class="ok">✓</span>&nbsp;15,000+ Units Sold</div>
         </div>
+
+        <div class="hph-testimonial">
+          <div class="hph-test-avatar" style="color:var(--pink-dark)">RM</div>
+          <div>
+            <p class="hph-test-quote">"I was skeptical about beef organs in capsule form. Six weeks in — no taste, no burps, and my iron is finally normal."</p>
+            <div class="hph-test-attr">Rachel M.<span class="verif">✓ Verified buyer</span></div>
+          </div>
         </div>
+
+        <div class="hph-badges">
+          <span><span class="bok">✓</span> Third-party lab tested, every batch</span>
+          <span><span class="bok">✓</span> Grass-fed &amp; finished in Argentina</span>
+          <span><span class="bok">✓</span> Made in a US, FDA-registered GMP facility</span>
+        </div>
+
+        <p class="hph-disclaimer">†These statements have not been evaluated by the Food &amp; Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </div>
+        <script>
+        (function(){
+          var SUB=0.15, mode='sub';
+          var box=document.querySelector('.hph-buybox'); if(!box) return;
+          var packs=[].slice.call(box.querySelectorAll('.pack'));
+          var cta=document.getElementById('hphCta');
+          function money(n){var s=(Math.round(n*100)/100).toFixed(2).replace(/\.00$/,'');return '$'+s;}
+          function render(){
+            packs.forEach(function(p){
+              var base=parseFloat(p.dataset.base), units=parseFloat(p.dataset.units);
+              var price=mode==='sub'?base*(1-SUB):base, unit=price/units;
+              p.querySelector('.pprice').textContent=money(price);
+              p.querySelector('.punit').textContent=money(unit)+'/mo';
+              var po=p.querySelector('.pold');
+              if(mode==='sub'){po.textContent=money(base);po.style.display='block';}else{po.style.display='none';}
+            });
+            var sel=box.querySelector('.pack.sel');
+            var b=parseFloat(sel.dataset.base), pr=mode==='sub'?b*(1-SUB):b;
+            cta.querySelector('.ctatext').textContent='Add to Cart — '+money(pr);
+          }
+          packs.forEach(function(p){
+            p.addEventListener('click',function(){
+              packs.forEach(function(x){x.classList.remove('sel');x.querySelector('input').checked=false;});
+              p.classList.add('sel'); p.querySelector('input').checked=true; render();
+            });
+          });
+          box.querySelectorAll('.hph-toggle button').forEach(function(btn){
+            btn.addEventListener('click',function(){
+              mode=btn.dataset.mode;
+              box.querySelectorAll('.hph-toggle button').forEach(function(x){x.classList.remove('active');});
+              btn.classList.add('active'); render();
+            });
+          });
+          render();
+        })();
+        </script>
 
     </div>
   </div>
@@ -3062,7 +3205,7 @@ html {
     <div class="hptl-header">
       <span class="hptl-tag">How It Works</span>
       <h2>How HiPrimal works — <span class="hl">week by week</span></h2>
-      <p class="hptl-sub">Real food works on its own clock.</p>
+      <p class="hptl-sub">Real food works on its own clock. Everyone's timeline is different — results vary.</p>
     </div>
 
     <div class="hptl-timeline">
@@ -3076,7 +3219,7 @@ html {
         <div class="hptl-icon">🔥</div>
         <span class="hptl-when"><span class="hptl-when-num">2</span>Month 1</span>
         <h3>Vitality returns</h3>
-        <p>Iron support kicks in. Most women report rising sex drive, deeper rest, and a steady sense of well-being.</p>
+        <p>As iron stores rebuild, many women report deeper rest, steadier moods, and a calmer, more grounded sense of well-being.</p>
       </div>
       <div class="hptl-card">
         <div class="hptl-icon">🛡️</div>
@@ -3099,8 +3242,8 @@ html {
       <div class="hptl-card">
         <div class="hptl-icon">🌸</div>
         <span class="hptl-when"><span class="hptl-when-num">6</span>Month 12</span>
-        <h3>Hormones in balance, cycles in rhythm</h3>
-        <p>A full year of consistent ancestral nutrition: regular cycles, steady mood, and the kind of energy that doesn't come from caffeine.</p>
+        <h3>A steady, well-nourished baseline</h3>
+        <p>A full year of consistent whole-food nutrition: steadier moods, even energy, and the kind of vitality that doesn't come from caffeine.</p>
       </div>
     </div>
   </div>
@@ -3132,7 +3275,7 @@ html {
     <div class="hpwi-header">
       <span class="hpwi-tag">Real Food, Capsuled</span>
       <h2>The world's most <span class="hl">nutrient-dense superfood</span><br>for high-performance women</h2>
-      <p class="hpwi-lead">Reduces hormonal imbalance, lifts daily energy, supports menstrual health, and helps with natural weight management. And because it is real food — not synthetic vitamins — your body absorbs it instantly.</p>
+      <p class="hpwi-lead">A whole-food source of the nutrients women most often run low on — iron, B12, folate, and real vitamin A — to support steady energy, healthy skin and hair, and overall vitality.† Because it's real food, not synthetic isolates, your body recognizes and absorbs it well.</p>
     </div>
 
     <div class="hpwi-grid">
@@ -3242,7 +3385,25 @@ html {
   </div>
 </section>
 
-</section><section id="shopify-section-template--27462889046386__hiprimal_ingredients_label" class="shopify-section section-wrapper">
+</section>
+<section class="hpcta-band">
+  <style>
+  .hpcta-band{background:linear-gradient(135deg,#FF1A94,#AD055F);color:#fff;text-align:center;padding:60px 24px;font-family:'Barlow Condensed',sans-serif}
+  .hpcta-inner{max-width:720px;margin:0 auto}
+  .hpcta-band h2{font-size:clamp(26px,4.4vw,42px);font-weight:800;text-transform:uppercase;line-height:1.08;margin:0 0 14px;color:#fff}
+  .hpcta-band p{font-family:'Inter',sans-serif;font-size:16px;opacity:.95;margin:0 0 26px;line-height:1.6}
+  .hpcta-btn{display:inline-block;background:#fff;color:#AD055F;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:17px;padding:17px 44px;border-radius:14px;text-decoration:none;box-shadow:0 14px 34px rgba(0,0,0,.22);transition:transform .15s}
+  .hpcta-btn:hover{transform:translateY(-2px)}
+  .hpcta-trust{font-family:'Inter',sans-serif;font-size:13px;margin-top:20px;opacity:.92;font-weight:600}
+  </style>
+  <div class="hpcta-inner">
+    <h2>Give your body what whole food used to give it</h2>
+    <p>Six grass-fed organs. Two small capsules a day. No fishy taste, no beefy burps — and a 100% money-back guarantee if it's not for you.</p>
+    <a href="#buy" class="hpcta-btn">Choose Your Plan →</a>
+    <div class="hpcta-trust">★★★★★ 4.9/5 · 3,000+ verified reviews · Free shipping &amp; returns</div>
+  </div>
+</section>
+<section id="shopify-section-template--27462889046386__hiprimal_ingredients_label" class="shopify-section section-wrapper">
 <link href="assets/css2.13005e48.css" rel="stylesheet" type="text/css" media="all" />
 <style>
   .hpil{--pink:#FF1A94;--pink-dark:#E2037A;--pink-light:#FFF0F7;--text:#1a1a2e;--text-muted:#555570;--bg:#FFFFFF;--bg-warm:#FFF8FC;--border:rgba(0,0,0,0.08);--f-title:'Barlow Condensed',sans-serif;--f-body:'Inter',sans-serif;font-family:var(--f-body);color:var(--text);background:var(--bg);padding:80px 24px;line-height:1.7}
@@ -3356,8 +3517,8 @@ html {
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20 items-start ">
       <div class="flex flex-col gap-6 justify-between h-full gap-y-6 md:gap-y-12 ">
         <div class="flex flex-col gap-6 gap-y-2 ">
-          <h2 class=" title-xs-bold sm:title-md-bold dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--titleTextAlign_text_alignment); color: #3D101B;">Your Primal Questions Answered</h2>
-          <p class=" content-md-medium sm:content-lg-medium dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--subtitleTextAlign_text_alignment); color: #BD284D;">Unlock the secrets to peak vitality. Our Hiprimal Beef Organ Superfoods are designed to seamlessly integrate into your routine, delivering unparalleled ancestral nourishment.</p>
+          <h2 class=" title-xs-bold sm:title-md-bold dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--titleTextAlign_text_alignment); color: #3D101B;">Your Questions, Answered</h2>
+          <p class=" content-md-medium sm:content-lg-medium dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--subtitleTextAlign_text_alignment); color: #BD284D;">Honest answers to the questions women ask us most — sourcing, taste, results, and how to take it.</p>
         </div>
 
 
@@ -3497,7 +3658,7 @@ html {
               
               </div>
             </div>
-            <p class=" content-sm-medium sm:content-md-medium dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--helpDescriptionTextAlign_text_alignment); color: #BD284D;">Our dedicated team is here to help you on your journey to ancestral strength. Reach out anytime!</p>
+            <p class=" content-sm-medium sm:content-md-medium dropmagic-text" style="text-align: var(--template--27462889046386__Z4hLAnGwBF--helpDescriptionTextAlign_text_alignment); color: #BD284D;">Can't find your answer? Email our team — a real person will get back to you, usually the same day.</p>
           </div>
         </div>
       </div>
@@ -3570,7 +3731,7 @@ html {
       
     }</style><dm-accordion class="accordion_LzbdvnZ6ve--dm-accordion rounded-sm w-full border rounded-sm py-4 px-5 [&>#accordion-content]:pt-2" style="background-color: #FDF7F8;  border-color: #F0C1CD;   border-width: 1px;  ">
     <div class="accordion_LzbdvnZ6ve--dm-accordion__intro gap-2" id="accordion-intro">
-      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--LzbdvnZ6ve--accordionTitleTextAlign_text_alignment); color: #20090F;">What makes Hiprimal Beef Organ Superfoods so powerful?</p>
+      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--LzbdvnZ6ve--accordionTitleTextAlign_text_alignment); color: #20090F;">What exactly is HiPrimal?</p>
 
       
         
@@ -3584,7 +3745,7 @@ html {
 
     </div>
     <div class="accordion_LzbdvnZ6ve--dm-accordion__content" id="accordion-content">
-      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--LzbdvnZ6ve--accordionContentTextAlign_text_alignment); color: #BD284D;">These aren't just capsules; they're a direct link to ancestral vitality! Packed with 100% grass-fed beef organs, they deliver a powerhouse of nutrients to fuel your body, boost energy, and support overall wellness, just like our resilient ancestors thrived. Reclaim your strength naturally and feel the difference.</p>
+      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--LzbdvnZ6ve--accordionContentTextAlign_text_alignment); color: #BD284D;">HiPrimal is a whole-food multivitamin made from six grass-fed beef organs — liver, heart, kidney, spleen, pancreas, and thymus. They're freeze-dried and packed into two small daily capsules, giving you a natural, highly absorbable source of iron, B12, folate, and vitamin A.†</p>
     </div>
   </dm-accordion>
 
@@ -3657,7 +3818,7 @@ html {
       
     }</style><dm-accordion class="accordion_vlHyBWirHP--dm-accordion rounded-sm w-full border rounded-sm py-4 px-5 [&>#accordion-content]:pt-2" style="background-color: #FDF7F8;  border-color: #F0C1CD;   border-width: 1px;  ">
     <div class="accordion_vlHyBWirHP--dm-accordion__intro gap-2" id="accordion-intro">
-      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--vlHyBWirHP--accordionTitleTextAlign_text_alignment); color: #20090F;">How will Hiprimal Superfoods enhance my daily energy and vitality?</p>
+      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--vlHyBWirHP--accordionTitleTextAlign_text_alignment); color: #20090F;">How does it help my energy, skin &amp; hair?</p>
 
       
         
@@ -3671,7 +3832,7 @@ html {
 
     </div>
     <div class="accordion_vlHyBWirHP--dm-accordion__content" id="accordion-content">
-      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--vlHyBWirHP--accordionContentTextAlign_text_alignment); color: #BD284D;">Imagine tapping into the ancient wisdom of nutrition! Our capsules flood your body with essential vitamins and minerals, optimizing your natural energy production and helping you feel vibrant and resilient throughout your day, connecting you to the boundless energy of your primal self.</p>
+      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--vlHyBWirHP--accordionContentTextAlign_text_alignment); color: #BD284D;">Beef liver is one of nature's most concentrated sources of B12, folate, and heme iron — the nutrients your body relies on to produce energy and support healthy skin and hair. Many women run low on iron in particular, and replenishing it through whole food can help you feel more like yourself.† Results vary from person to person.</p>
     </div>
   </dm-accordion>
 
@@ -3744,7 +3905,7 @@ html {
       
     }</style><dm-accordion class="accordion_8ucQNyhWKr--dm-accordion rounded-sm w-full border rounded-sm py-4 px-5 [&>#accordion-content]:pt-2" style="background-color: #FDF7F8;  border-color: #F0C1CD;   border-width: 1px;  ">
     <div class="accordion_8ucQNyhWKr--dm-accordion__intro gap-2" id="accordion-intro">
-      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--8ucQNyhWKr--accordionTitleTextAlign_text_alignment); color: #20090F;">Can I trust the sourcing and quality of Hiprimal Beef Organ Superfoods?</p>
+      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--8ucQNyhWKr--accordionTitleTextAlign_text_alignment); color: #20090F;">Where do the organs come from, and is it tested?</p>
 
       
         
@@ -3758,7 +3919,7 @@ html {
 
     </div>
     <div class="accordion_8ucQNyhWKr--dm-accordion__content" id="accordion-content">
-      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--8ucQNyhWKr--accordionContentTextAlign_text_alignment); color: #BD284D;">Absolutely! We source only 100% grass-fed and pasture-raised beef organs, ensuring the purest, most potent nutrition. This commitment honors the ancestral way of life, delivering unmatched quality for your wellness journey and peace of mind.</p>
+      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--8ucQNyhWKr--accordionContentTextAlign_text_alignment); color: #BD284D;">Yes. Our organs come from 100% grass-fed, pasture-raised cattle in Argentina, then cold freeze-dried to protect the nutrients. Every batch is third-party lab tested for purity and potency, and made in a US, FDA-registered facility that follows GMP standards.</p>
     </div>
   </dm-accordion>
 
@@ -3845,7 +4006,7 @@ html {
 
     </div>
     <div class="accordion_4z9MI4mTG--dm-accordion__content" id="accordion-content">
-      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--4z9MI4mTG--accordionContentTextAlign_text_alignment); color: #BD284D;">Most women feel a shift in energy within 2 weeks, and see skin/hair improvements within 30-60 days.</p>
+      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--4z9MI4mTG--accordionContentTextAlign_text_alignment); color: #BD284D;">Most women notice a shift in energy within the first couple of weeks. Skin, hair, and nail benefits tend to build over 30–60 days of daily use. Everyone's different and results aren't guaranteed — which is exactly why every order is backed by our 100% money-back guarantee.</p>
     </div>
   </dm-accordion>
 
@@ -4005,7 +4166,7 @@ html {
       
     }</style><dm-accordion class="accordion_hF8BXFpSzY--dm-accordion rounded-sm w-full border rounded-sm py-4 px-5 [&>#accordion-content]:pt-2" style="background-color: #FDF7F8;  border-color: #F0C1CD;   border-width: 1px;  ">
     <div class="accordion_hF8BXFpSzY--dm-accordion__intro gap-2" id="accordion-intro">
-      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--hF8BXFpSzY--accordionTitleTextAlign_text_alignment); color: #20090F;">Who is the ideal person to benefit from Hiprimal Beef Organ Superfoods?</p>
+      <p class=" content-md-semibold sm:content-lg-semibold dropmagic-text" style="text-align: var(--hF8BXFpSzY--accordionTitleTextAlign_text_alignment); color: #20090F;">Who is HiPrimal for?</p>
 
       
         
@@ -4019,7 +4180,7 @@ html {
 
     </div>
     <div class="accordion_hF8BXFpSzY--dm-accordion__content" id="accordion-content">
-      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--hF8BXFpSzY--accordionContentTextAlign_text_alignment); color: #BD284D;">If you're a wellness seeker prioritizing foundational nutrition for sustained energy and daily vitality, these are for you! Anyone looking to tap into ancient wisdom for modern health challenges will thrive by embracing this powerful, transformative ancestral tradition. Feel the difference from within.</p>
+      <p class=" content-md-medium sm:content-md-medium dropmagic-text" style="text-align: var(--hF8BXFpSzY--accordionContentTextAlign_text_alignment); color: #BD284D;">Women who want a simple, whole-food alternative to a synthetic multivitamin — especially anyone focused on everyday energy, iron, and healthy skin and hair. It isn't for vegans or vegetarians (it's 100% beef organ), and if you're pregnant, nursing, or managing a health condition, check with your doctor first.</p>
     </div>
   </dm-accordion>
 
@@ -4322,6 +4483,50 @@ html {
 
 
     
+  <style>
+    .hph-sticky{position:fixed;left:0;right:0;bottom:0;z-index:9999;transform:translateY(120%);transition:transform .28s ease;background:#fff;border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -8px 24px rgba(0,0,0,.10)}
+    .hph-sticky.show{transform:translateY(0)}
+    .hph-sticky-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 18px}
+    .hph-sticky-info{display:flex;flex-direction:column;line-height:1.2;font-family:'Inter',sans-serif}
+    .hph-sticky-info strong{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:15px;letter-spacing:.02em;color:#1a1a2e}
+    .hph-sticky-info span{font-size:13px;color:#555570;font-weight:600}
+    .hph-sticky-info span b{color:#1a1a2e}
+    .hph-sticky-btn{background:#FF1A94;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:15px;padding:13px 30px;border-radius:12px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 22px rgba(255,26,148,.32)}
+    .hph-sticky-btn:hover{background:#E2037A}
+  </style>
+  <div id="hphSticky" class="hph-sticky" aria-hidden="true">
+    <div class="hph-sticky-inner">
+      <div class="hph-sticky-info">
+        <strong>HiPrimal</strong>
+        <span id="hphStickyPrice">Subscribe &amp; Save</span>
+      </div>
+      <a href="#buy" class="hph-sticky-btn">Add to Cart →</a>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var bar=document.getElementById('hphSticky'); var box=document.getElementById('buy');
+    if(!bar||!box) return;
+    var priceEl=document.getElementById('hphStickyPrice');
+    function sync(){
+      var sel=box.querySelector('.pack.sel'); if(!sel) return;
+      var p=sel.querySelector('.pprice'); var name=sel.querySelector('.pname');
+      var mode=box.querySelector('.hph-toggle button.active');
+      var modeTxt=mode&&/sub/i.test(mode.dataset.mode)?'Subscribe & Save':'One-time';
+      if(p) priceEl.innerHTML='<b>'+p.textContent+'</b> · '+(name?name.textContent:'');
+    }
+    box.addEventListener('click',function(){setTimeout(sync,0);});
+    sync();
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var past=e.boundingClientRect.top<0; // scrolled below the buy box
+        if(!e.isIntersecting && past){bar.classList.add('show');bar.setAttribute('aria-hidden','false');}
+        else {bar.classList.remove('show');bar.setAttribute('aria-hidden','true');}
+      });
+    },{threshold:0});
+    io.observe(box);
+  })();
+  </script>
   <script src="assets/standard-actions.8695f39b.js" type="module" data-source-attribution="shopify.standard_actions"></script>
 </body>
 </html>
