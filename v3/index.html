@@ -383,6 +383,32 @@
   .hero-media img{border-radius:16px}
   .hero-media figcaption{background:#FFF2F8;color:#5C616E;border:0;border-radius:0 12px 0 0;font-weight:700}
 </style>
+<style id="v3-oxblood-text">
+  /* V3 — magenta accents/logo, oxblood text */
+  body{color:#5E1B21}
+  .hero h1{color:#5E1B21}
+  .hero h1 em{color:#EC0A78}
+  .hero .lead{color:#8A5F63}
+  .hero .lead b{color:#5E1B21}
+  .nav-links a{color:#8A5F63}
+  .nav-links a:hover{color:#EC0A78;border-bottom-color:#EC0A78}
+  .hero-trust{color:#5E1B21}
+  .hero-trust .icn{color:#18B368}
+  .burger svg{stroke:#5E1B21}
+  .hero-media figcaption{color:#8A5F63}
+  /* full-bleed hero: banner image right, baked-in white fade + gradient overlay, copy over the fade */
+  .hero{position:relative;overflow:hidden;isolation:isolate;background:#DFD0BD;padding:0}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:url(../assets/hero-banner-bone.jpg) right center/cover no-repeat}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,600px);align-items:center;min-height:620px;padding:64px 0}
+  @media(min-width:981px){
+    .hero .wrap{max-width:none;padding-left:12vw;padding-right:12vw}
+  }
+  @media(max-width:980px){
+    .hero{display:flex;flex-direction:column}
+    .hero-bg{position:relative;inset:auto;height:330px;background-position:right 28%}
+    .hero-grid{min-height:0;padding:18px 0 48px}
+  }
+</style>
 </head>
 <body>
 
@@ -418,6 +444,7 @@
 
 <!-- 3. HERO -->
 <section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
       <h1>You&rsquo;re not lazy. <em>You&rsquo;re depleted.</em></h1>
@@ -431,10 +458,6 @@
         <span><svg class="icn" viewBox="0 0 24 24"><path d="M3 21V10l6 4V10l6 4V7l6-3v17"/><path d="M3 21h18"/></svg>Made in a GMP-certified US facility</span>
       </p>
     </div>
-    <figure class="hero-media">
-      <img src="assets/woman-pouch.jpg" width="800" height="1280" alt="Woman holding a HiPrimal beef organ supplement pouch" fetchpriority="high" />
-      <figcaption>60 capsules · 30-day supply</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -449,7 +472,7 @@
         <p>Eyes heavy by mid-afternoon, reaching for a second coffee, &ldquo;tired&rdquo; as your default setting. For many women that&rsquo;s a body running low on the raw materials it makes energy with — <b>heme iron, B12, riboflavin</b>.</p>
         <p>Caffeine borrows energy. Nutrients are how your body actually makes it.</p>
       </div>
-      <div class="media"><img src="assets/hiprimal-pouch.jpg" width="1024" height="1024" loading="lazy" alt="Woman taking a HiPrimal capsule on a yoga mat" /></div>
+      <div class="media"><img src="../assets/hiprimal-pouch.jpg" width="1024" height="1024" loading="lazy" alt="Woman taking a HiPrimal capsule on a yoga mat" /></div>
     </div>
 
     <div class="story-row flip reveal">
@@ -460,7 +483,7 @@
         <p>No taste, no cooking, no synthetic isolates your body half-recognises. Just the food, concentrated.</p>
         <a class="tlink" href="#buy">Shop HiPrimal — $45 <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="media tint"><img src="assets/capsules.jpg" width="860" height="499" loading="lazy" alt="Freeze-dried beef organ capsules" /></div>
+      <div class="media tint"><img src="../assets/capsules.jpg" width="860" height="499" loading="lazy" alt="Freeze-dried beef organ capsules" /></div>
     </div>
 
   </div>
@@ -531,19 +554,19 @@
       <p class="sec-sub">Every batch is tested by independent, accredited US laboratories for heavy metals, microbes, and purity before it ships. The reports are published here — not &ldquo;available on request.&rdquo;</p>
     </div>
     <div class="lab-grid">
-      <a class="coa reveal" href="assets/coa/heavy-metals.pdf" target="_blank" rel="noopener">
+      <a class="coa reveal" href="../assets/coa/heavy-metals.pdf" target="_blank" rel="noopener">
         <svg class="icn" viewBox="0 0 24 24"><path d="M14 3v5l5.5 9.5a1.8 1.8 0 0 1-1.6 2.5H6.1a1.8 1.8 0 0 1-1.6-2.5L10 8V3"/><path d="M8.5 3h7"/><path d="M7.5 15h9"/></svg>
         <h3>Heavy metals</h3>
         <p>ICP-MS panel — arsenic, cadmium, lead, mercury — against strict limits.</p>
         <span class="open">View PDF <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
       </a>
-      <a class="coa reveal" href="assets/coa/microbiology.pdf" target="_blank" rel="noopener">
+      <a class="coa reveal" href="../assets/coa/microbiology.pdf" target="_blank" rel="noopener">
         <svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="10" cy="10" r="1.4"/><circle cx="14.5" cy="13.5" r="1.4"/><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2"/></svg>
         <h3>Microbiology</h3>
         <p>Tested for E.&nbsp;coli, salmonella, staph, yeast, and mold on every batch.</p>
         <span class="open">View PDF <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
       </a>
-      <a class="coa reveal" href="assets/coa/identity-purity.pdf" target="_blank" rel="noopener">
+      <a class="coa reveal" href="../assets/coa/identity-purity.pdf" target="_blank" rel="noopener">
         <svg class="icn" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
         <h3>Identity &amp; purity</h3>
         <p>Confirms each organ is what the label says — and that nothing else is in the capsule.</p>
@@ -634,7 +657,7 @@
 <section id="founder">
   <div class="wrap founder-grid">
     <div class="founder-media reveal">
-      <video src="assets/hiprimal-lyn.a2172f7f.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Lyn, founder of HiPrimal"></video>
+      <video src="../assets/hiprimal-lyn.a2172f7f.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Lyn, founder of HiPrimal"></video>
     </div>
     <div class="founder reveal">
       <span class="kicker">From the founder</span>
@@ -657,12 +680,12 @@
     <div class="rev-grid">
       <figure class="rev-vid reveal">
         <span class="tag">Gifted</span>
-        <video src="assets/a434f5855c4041fa8a9f3745ff2abb1e.SD-480p-0.9Mbps-83379418.e8852c50.mp4" poster="assets/walicia-tiktok-poster.fd89c6b0.jpg" controls preload="none" playsinline></video>
+        <video src="../assets/a434f5855c4041fa8a9f3745ff2abb1e.SD-480p-0.9Mbps-83379418.e8852c50.mp4" poster="../assets/walicia-tiktok-poster.fd89c6b0.jpg" controls preload="none" playsinline></video>
         <figcaption class="who">@wellnesswalicia</figcaption>
       </figure>
       <figure class="rev-vid reveal">
         <span class="tag">Gifted</span>
-        <video src="assets/b8ae7dbb18704073a40828a052222279.SD-480p-0.9Mbps-83381018.56d68caa.mp4" poster="assets/creator-B-poster.896c0938.jpg" controls preload="none" playsinline></video>
+        <video src="../assets/b8ae7dbb18704073a40828a052222279.SD-480p-0.9Mbps-83381018.56d68caa.mp4" poster="../assets/creator-B-poster.896c0938.jpg" controls preload="none" playsinline></video>
         <figcaption class="who">TikTok creator</figcaption>
       </figure>
     </div>
@@ -679,7 +702,7 @@
   <div class="wrap">
     <div class="buy-grid">
       <figure class="buy-media reveal">
-        <img src="assets/hiprimal-pouch.jpg" width="1024" height="1024" loading="lazy" alt="HiPrimal beef organ supplement pouch" />
+        <img src="../assets/hiprimal-pouch.jpg" width="1024" height="1024" loading="lazy" alt="HiPrimal beef organ supplement pouch" />
         <figcaption>60 capsules per pouch · two a day · 30-day supply</figcaption>
       </figure>
       <div class="reveal">
